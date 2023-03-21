@@ -20,4 +20,10 @@ model1 <- lm(Petal.Width ~ . - Species, data = iris)
 summary(model1)
 
 #This is a model with predictors everything except for species, response variable is petal width
+#what if we want to test a simpler model?
+model2 <- lm(Petal.Width ~ . - Species - Sepal.Length, data = iris)
+summary(model2)
 
+#even simpler one 
+model3<-lm(Petal.Width ~ . - Species - Sepal.Length - 1, data = iris)
+summary(model3)
